@@ -52,8 +52,8 @@ function coingate_init() {
 
         public function admin_options() {
             ?>
-                <h3><?php _e('Coingate', 'woothemes'); ?></h3>
-                <p><?php _e('Coingate payment', 'woothemes'); ?></p>
+                <h3><?php _e('CoinGate', 'woothemes'); ?></h3>
+                <p><?php _e('Accept Bitcoin through the CoinGate.com and receive payments in euros and US dollars.', 'woothemes'); ?></p>
                 <table class="form-table">
                     <?php $this->generate_settings_html(); ?>
                 </table>
@@ -107,15 +107,15 @@ function coingate_init() {
                         'USD'     => __('US Dollars ($)', 'woocommerce'),
                         'BTC'     => __('Bitcoin (฿)', 'woocommerce')
                     ),
-                    'description' => __('Currency you want to receive', 'woocomerce'),
+                    'description' => __('Currency in which you wish to receive your payments. Currency conversions are done at CoinGate.', 'woocomerce'),
                     'default'     => 'EUR'
                 ),
                 'test'        => array(
                     'title'       => __('Test', 'woocommerce'),
                     'type'        => 'checkbox',
                     'label'       => __('Enable test mode', 'woocommerce'),
-                    'default'     => 'yes',
-                    'description' => __('Enable this to accept test payments', 'woocommerce'),
+                    'default'     => 'no',
+                    'description' => __('Enable this to accept test payments (sandbox.coingate.com). <a href="http://support.coingate.com/knowledge_base/topics/how-can-i-test-your-service-without-signing-up" target="_blank">Read more about testing</a>', 'woocommerce'),
                 ),
             );
         }
