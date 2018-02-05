@@ -148,7 +148,7 @@ function coingate_init() {
             }
 
             $coingate->create_order(array(
-                'order_id'          => $order->id,
+                'order_id'          => $order->get_id(),
                 'price'             => number_format($order->get_total(), 2, '.', ''),
                 'currency'          => get_woocommerce_currency(),
                 'receive_currency'  => $this->receive_currency,
